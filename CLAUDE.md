@@ -42,15 +42,83 @@ A collection app for daily challenge questions from Christopher's Po-Shen Loh ma
 
 ---
 
-## Key extraction workflow
+## Naming convention
 
-Daily challenges are on daily.poshenloh.com inside each lesson. The flow to capture them:
-1. Navigate to a lesson page on the course
-2. The challenge question appears (often with an image/diagram)
-3. Student answers -> "You got it right!" page -> click Continue
-4. Detailed solution page with step-by-step explanation (often multiple images)
-5. Extract: question text, question image URL, answer, solution steps, solution image URLs
-6. Paste into the app via the Add form
+`M{module}-D{day}-Q{n}` -- e.g., M1-D1-Q3 = Module 1, Day 1, Question 3
+
+Within a day, questions are numbered sequentially across all quiz items:
+- Q1 = Something to Think About
+- Q2 = Challenge Explanation (1 of N)
+- Q3 = Challenge Explanation (2 of N)
+- ...continues through all Challenge Explanations...
+- QN = Your Turn
+- QN+1 = Your Turn Explanation (1 of M)
+- ...etc.
+
+Example: Day 1 (Fraction Gymnastics) has 7 items = Q1-Q7. Day 2 (Continued Fraction) has 8 items = Q1-Q8.
+
+Image naming: `M1-D1-Q3-question.png`, `M1-D1-Q3-solution-1.png`, `M1-D1-Q3-solution-2.png`
+
+---
+
+## Extraction workflow (via Claude in Chrome)
+
+Daily challenges are on daily.poshenloh.com inside each module's lesson pages.
+
+### Structure per day
+Each day (e.g., "Day 1 Challenge: Fraction Gymnastics") contains 7-8 quiz items:
+1. **Something to Think About** (QUIZ - 1 QUESTION - PREREQUISITE)
+2. **Challenge Explanation (1 of N)** through **(N of N)** (QUIZ - 1 QUESTION) -- typically 3-4
+3. **Your Turn** (QUIZ - 1 QUESTION - PREREQUISITE)
+4. **Your Turn Explanation (1 of M)** through **(M of M)** (QUIZ - 1 QUESTION) -- typically 2
+
+Every single item has a quiz with 1 question.
+
+### Two cases when landing on a quiz
+
+**Case 1: Already completed** (checkmark in sidebar)
+- Shows "You completed [quiz name] / Your score / 100%" page
+- Click **VIEW AGAIN** to retake and see the question
+- Or click **CONTINUE** to skip to next item
+
+**Case 2: New/untaken** (no checkmark)
+- Shows the video + quiz directly
+
+### Per-quiz extraction flow
+
+1. **Video page loads** -- skip video to the end (scrub progress bar to right)
+2. **Question appears** as an image on blue background at end of video -- screenshot this (question image)
+3. **Scroll down** below the video to see multiple choice answers (A/B/C/D/E with roman numerals i/ii/iii/iv/v)
+4. **Select the correct answer** and click **CONFIRM** (Claude auto-solves, no need to ask user)
+5. **Solution page appears** -- "This answer is correct." followed by detailed worked solution
+6. **Extract solution content** -- grab BOTH text and images (see below)
+7. Add entry to app data
+
+### Auto-solve
+Claude should solve the math problems and auto-select answers without asking the user. The questions are typically:
+- Multiple choice with roman numeral options (i through v or vi)
+- Math involving fractions, algebra, geometry, combinatorics, number theory
+- Hint is often provided on the question slide
+
+### Image extraction -- prefer actual URLs over screenshots
+Solution pages (and sometimes question pages) contain actual `<img>` elements hosted on `files.cdn.thinkific.com`. **Always prefer grabbing the image src URL** over screenshotting:
+- Use JS to query `<img>` elements on the page and grab their `src` URLs
+- Store these CDN URLs directly in `questionImageUrl`, `answerImageUrl`, or `solutionImageUrls`
+- Only fall back to screenshots when the content is rendered in video frames (blue background question slides) or when no `<img>` element exists
+
+### Solution pages have mixed text + images
+The solution page often contains a mix of:
+- **Text labels**: "Solution 1: Convert to decimals:", "Solution 2: Find the least common denominator:"
+- **Images**: Worked-out math steps as `<img>` elements with CDN URLs
+- Sometimes the text is trivial (just labels), sometimes it's meaningful
+- Capture both: text goes in `solutionSteps`, image URLs go in `solutionImageUrls`
+- A single solution page may have 2+ images (e.g., Solution 1 image + Solution 2 image)
+
+### Key observations
+- Questions are displayed as **images on blue background** at the end of videos -- typically need screenshot
+- Answer choices below video are **text** (roman numerals mapping to values shown in question image)
+- Solutions after answering correctly contain **actual `<img>` elements** with CDN URLs -- grab these directly
+- Solution pages often have multiple solution approaches (Solution 1, Solution 2) with separate images
 
 ---
 
