@@ -12,7 +12,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job with trying! And if you didn't get the right answer, don't worry, being right or wrong is not the most important thing in learning! These challenges are meant to be strange and hard, and just give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -28,7 +28,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "There's a repeating decimal, 0.33333..., that looks familiar here! Let's separate it out and combine it back again into a single fraction:",
+      "solutionSteps": "There's a repeating decimal, 0.33333..., that looks familiar here!\nLet's separate it out and combine it back again into a single fraction:",
       "solutionImageUrls": [
         "https://files.cdn.thinkific.com/file_uploads/170860/images/ad9/120/d21/1580521696370.jpg"
       ],
@@ -46,8 +46,14 @@
       "questionImageUrl": "",
       "answer": "SKIPPED",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Solution 1. Let's use the fact that 48 is a multiple of 12, separate that out from the 56, and see what is left as a remainder after dividing by 12:\nSolution 2. Use number sense.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/6f8/f52/fb9/1577067801970.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/cf7/9dc/5fd/1580522040834.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/29e/fad/2a1/1580522118056.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/4bb/0c3/95e/1580522142698.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/42b/0f5/e30/1580522170780.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -62,8 +68,10 @@
       "questionImageUrl": "",
       "answer": "SKIPPED",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's use the trick from lesson, which is to convert decimals into fractions, and then cancel factors from the numerator and denominator:",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/1f8/a77/717/1577067916501.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -78,7 +86,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don't worry...",
+      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don't worry. Even though this challenge is related to the one you just saw, it has a twist, to give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [
         "https://files.cdn.thinkific.com/file_uploads/170860/images/2b2/382/9ac/1585847421442.jpg",
         "https://files.cdn.thinkific.com/file_uploads/170860/images/ba1/a78/c3f/1585847444620.jpg"
@@ -97,7 +105,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "Let's turn all of the fractions into fractions which have the same denominator of n(n+1), and then simplify:",
+      "solutionSteps": "Let's turn all of the fractions into fractions which have the same denominator of n (n + 1), and then simplify:",
       "solutionImageUrls": [
         "https://files.cdn.thinkific.com/file_uploads/170860/images/b3c/0bf/96b/1577068141839.jpg"
       ],
@@ -134,7 +142,7 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [
         "https://files.cdn.thinkific.com/file_uploads/170860/images/eb2/255/665/1585847543778.jpg",
         "https://files.cdn.thinkific.com/file_uploads/170860/images/5f6/349/62d/1585847567884.jpg",
@@ -174,8 +182,10 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "The neat thing here is that since the sub-fractions continue on forever until infinity, removing one layer of the fractions means that we still have an expression with infinite sub-fractions.",
-      "solutionImageUrls": [],
+      "solutionSteps": "The neat thing here is that since the sub-fractions continue on forever until infinity, removing one layer means we still have infinite sub-fractions.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/156/f9b/0c3/1579489008266.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -190,8 +200,12 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "Let's use the equation from the previous question:",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's use the equation from the previous question. If we multiply (4-x) to both sides we get...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/d16/3ad/a28/1579489132457.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/fc4/994/d14/1579489181771.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7d0/2a6/fc7/1579489254184.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -206,8 +220,16 @@
       "questionImageUrl": "",
       "answer": "D",
       "answerImageUrl": "",
-      "solutionSteps": "The formula given in the beginning tells us that...",
-      "solutionImageUrls": [],
+      "solutionSteps": "The formula given in the beginning tells us that... Plugging in gives fractions that get closer and closer!",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c71/a61/ebe/1578450631669.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/944/eb9/2d3/1578451206385.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/855/ff4/b62/1578450946319.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/cfb/c8d/e26/1578451050411.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/ed1/680/e8c/1578450683016.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/a82/dbd/119/1578450987592.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/a42/ccb/59d/1578451107442.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -222,7 +244,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -239,7 +261,13 @@
       "answer": "B",
       "answerImageUrl": "",
       "solutionSteps": "The neat thing is that it doesn't matter which order they eat the slices in, because either way, of the pizza would remain!",
-      "solutionImageUrls": [],
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/aff/105/8da/1578451472896.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/8a3/ce5/870/1578451599195.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/fc4/885/167/1588648590006.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/f76/911/646/1588648698962.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/853/a3e/00b/1588648740848.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -254,8 +282,12 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "After Alice eats the pizza, there is of the pizza left. Then Bob eats of what is left...",
-      "solutionImageUrls": [],
+      "solutionSteps": "After Alice eats the pizza, there is of the pizza left. Then Bob eats of what is left... We can cancel factors, leaving us with 1/2. The number of slices left is 3, so half equals three slices, and the whole pizza contains 6 slices.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7bd/71c/bcd/1580592507829.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/5be/b1b/fc1/1580592529354.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/054/eda/883/1580592575850.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -270,8 +302,11 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Good job on trying!...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7ac/2f2/bbe/1585847655281.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e62/3c8/351/1585847679517.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -286,8 +321,10 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "One way to visualize this is that you have a pie cut into slices. The top number means how many slices you take. The bottom number means how many slices are in the whole pie.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/d34/83a/7e8/M1W1D3-ch-part-1-pies.png"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -302,8 +339,13 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Our number is abcd, where a,b,c,d are the digits. We want to multiply abcd by 11...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/b13/a7d/df9/1578443046429.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/04e/e0c/d85/1578443068951.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/be3/4d1/f6a/M1W1D3-ch-part-2-multiple-11-trick.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/116/0d3/186/M1W1D3-ch-part-2-multiple-11-trick-b-c.png"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -318,8 +360,14 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's try to get the denominators close together! If we get their denominators close to 25 or 23, this will make them easier to compare.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/bc8/623/944/1578443444320.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/747/c25/b0f/1579559326777.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e8e/fa3/20f/1578443658486.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/21d/59a/df7/1578443711182.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/799/03a/008/1578443749851.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -334,8 +382,14 @@
       "questionImageUrl": "",
       "answer": "D",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Notice that the number of miss shots doesn't change, because we are only adding success shots. Since we want 99%, 1% should be miss shots.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/760/1b5/647/1578443945745.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/bbe/a7c/d9c/1578443984813.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/274/6d1/5aa/1578444018748.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/ef5/fd6/289/1579969696071.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/624/3b2/ffc/1579969696169.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -350,8 +404,11 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Good job on trying!...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/028/32f/d09/1585847736385.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/930/ead/f99/1585847763509.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -366,8 +423,11 @@
       "questionImageUrl": "",
       "answer": "D",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let x equal the amount that we add to the top and bottom. Then we get",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/8f4/cb7/513/1580592988187.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/932/8a4/0d4/1578444802693.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -382,8 +442,11 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "As you keep adding 2 to the top and 1 to the bottom, after a million times the fraction would be close to 2,000,000/1,000,000 = 2.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c15/590/a6e/1578778367481.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/9d3/c2a/55b/1578778416912.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -398,7 +461,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -414,8 +477,14 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The numerator of the success rate means the number of success shots you made. If you continue to make miss shots, these shouldn't change the numerator!",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/3b6/0f3/c87/1580593144107.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/30d/86c/bc7/1580593204624.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e6b/07d/94c/1580593277812.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/87e/d60/488/1580593315465.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/f1a/552/189/1580593340482.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -430,8 +499,14 @@
       "questionImageUrl": "",
       "answer": "D",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's set up our equation. Let x = number of additional shots. Our success rate after is (7+x)/(10+x). To solve, cross-multiply.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/344/f99/8cc/1578435770092.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/417/883/cce/1602563520577.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c20/986/be1/1602563619461.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/8f5/746/b31/1602564302160.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/be4/034/d01/1602564643934.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -446,8 +521,12 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let x = total shots in beginning. Success rate was 7/x. After 30 additional success shots, rate was (7+30)/(x+30) which was double.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/ed7/c7a/3c8/1578437658325.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/1af/bf5/72b/1578437682768.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/bcf/e95/773/1578437712292.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -462,8 +541,14 @@
       "questionImageUrl": "",
       "answer": "E",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let x = total shots in beginning. Success rate was 7/x. After 30 shots, rate (7+30)/(x+30) was double. Multiplying both sides...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/951/370/f64/1579490155683.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/6b1/890/6e6/1579490155780.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/234/4a3/bae/1579490155608.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/0da/562/bb5/1579490155870.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/337/23e/xxx/placeholder.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -478,8 +563,12 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Good job on trying!...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/731/d67/a47/1585847825839.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/564/ce7/3b8/1585847849603.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e72/5d0/099/1585847868616.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -494,8 +583,13 @@
       "questionImageUrl": "",
       "answer": "D",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's convert improper fractions into mixed numbers. They all contain 5, so compare the fractional parts! Starting from 1/6, adding one to numerator and denominator gets closer to 1.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/326/49d/4cb/1579789801410.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/498/8f5/1eb/1579789871933.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/703/546/fda/1579789912321.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/164/94f/089/1579790079498.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -510,8 +604,13 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's compare the first fraction in each pair. Notice something funny about the top numbers? The fraction composed by adding numerators and denominators has a value in the middle.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/f36/716/f86/1579790459719.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/6ba/ec5/4f1/1579790295668.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/5ba/97b/bc4/1579790361025.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e9c/17e/7ec/1579790557156.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
