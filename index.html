@@ -291,6 +291,7 @@
     const [filterTopic, setFilterTopic] = useState('all');
     const [searchText, setSearchText] = useState('');
     const [filterPromoted, setFilterPromoted] = useState('all');
+    const [filterFufuScore, setFilterFufuScore] = useState('all');
 
     // GH state
     const ghTokenRef = useRef('');
@@ -373,6 +374,8 @@
         if (filterTopic !== 'all' && c.topic !== filterTopic) return false;
         if (filterPromoted === 'yes' && !c.promoted) return false;
         if (filterPromoted === 'no' && c.promoted) return false;
+        if (filterFufuScore === 'wrong' && c.fufuOriginalScore !== '0%') return false;
+        if (filterFufuScore === 'right' && c.fufuOriginalScore !== '100%') return false;
         if (searchText) {
           const s = searchText.toLowerCase();
           const hay = `${c.question} ${c.answer} ${c.topic} ${c.solutionSteps}`.toLowerCase();
@@ -380,7 +383,7 @@
         }
         return true;
       }).sort((a, b) => b.id - a.id);
-    }, [challenges, filterModule, filterWeek, filterTopic, filterPromoted, searchText]);
+    }, [challenges, filterModule, filterWeek, filterTopic, filterPromoted, filterFufuScore, searchText]);
 
     function addChallenge(c) {
       const newData = { challenges: [...challenges, { ...c, id: Date.now() }] };
@@ -526,6 +529,11 @@
                 <option value="yes">Promoted</option>
                 <option value="no">Not Promoted</option>
               </select>
+              <select value={filterFufuScore} onChange={e => setFilterFufuScore(e.target.value)}>
+                <option value="all">All</option>
+                <option value="wrong">Got Wrong (0%)</option>
+                <option value="right">Got Right (100%)</option>
+              </select>
               <input
                 type="text"
                 placeholder="Search questions..."
@@ -577,6 +585,7 @@
               {c.day && <span className="badge">D{c.day}</span>}
               {c.topic && <span className="badge badge-topic">{c.topic}</span>}
               {c.promoted && <span className="badge badge-promoted">Promoted</span>}
+              {c.fufuOriginalScore === '0%' && <span className="badge badge-promoted">Fufu: 0%</span>}
               <span className="badge">{c.dateAdded}</span>
             </div>
             <div className="card-question">{c.question}</div>
@@ -658,6 +667,14 @@
             <label>Topic</label>
             <input type="text" value={form.topic || ''} onChange={e => set('topic', e.target.value)} />
           </div>
+          <div className="form-group" style={{maxWidth: 140}}>
+            <label>Fufu Original Score</label>
+            <select value={form.fufuOriginalScore || ''} onChange={e => set('fufuOriginalScore', e.target.value)}>
+              <option value="">Unknown</option>
+              <option value="100%">100%</option>
+              <option value="0%">0%</option>
+            </select>
+          </div>
         </div>
         <div className="form-group" style={{marginBottom: 10}}>
           <label>Question</label>
@@ -698,7 +715,7 @@
       question: '', questionImageUrl: '',
       answer: '', answerImageUrl: '',
       solutionSteps: '', solutionImageUrls: [],
-      dateAdded: TODAY, promoted: false,
+      dateAdded: TODAY, promoted: false, fufuOriginalScore: '',
     };
     const [form, setForm] = useState(empty);
     const set = (k, v) => setForm(prev => ({ ...prev, [k]: v }));
@@ -730,6 +747,14 @@
           <div className="form-group">
             <label>Topic</label>
             <input type="text" placeholder="e.g. Fractions" value={form.topic} onChange={e => set('topic', e.target.value)} />
+          </div>
+          <div className="form-group" style={{maxWidth: 140}}>
+            <label>Fufu Original Score</label>
+            <select value={form.fufuOriginalScore || ''} onChange={e => set('fufuOriginalScore', e.target.value)}>
+              <option value="">Unknown</option>
+              <option value="100%">100%</option>
+              <option value="0%">0%</option>
+            </select>
           </div>
         </div>
 
