@@ -1808,7 +1808,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don’t worry. Even though this challenge is related to the one you just saw, it has a twist, to give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -1824,7 +1824,7 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Our time is given in hours and minutes, but for the purposes of doing a math problem, it's better to convert the time into just one unit.  We need to choose which unit this should be. If we converted the time into just hours, it would be a strange decimal.  If we convert the time into seconds, it would be a very large, unwieldy number. If we use minutes, then this seems like the best idea! Click h",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -1840,8 +1840,14 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Choice i.),\n\n\n\n indicates that working together would take more time instead of less, which doesn't make sense. \nChoice ii.),\n\n\n\ngives their combined time as the difference between their individual times.  If they worked at the same speed, then their combined time would equal 0, which wouldn't make sense. \nCheck the units of choices v.) and vi.):\n\n\n\nThe left-hand gives units of , whereas the right",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/0a5/a42/d24/1580772144034.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/22a/0e2/f1c/1580772168095.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/8fd/b34/785/1580772235138.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/362/a65/4fe/1580772267361.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7e2/e54/f8f/1580772321738.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -1856,8 +1862,13 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Take a look back at the Day 7: Challenge Part 4 Explanation! We saw that \n\n\n\nTo get 111,111, we see that it looks like a \"111\" pushed to the left by three spaces, plus another 111, which equals\n\n\n\nIn the lesson which just finished, we saw that\n\n\n\n so we know the prime factors of 111,111 are \n\n\n\n\nClick here to see forum posts about this lesson!",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7db/dce/530/1580772413220.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/0f0/651/942/1580772466682.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/21e/90d/397/1580772493385.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/28c/7aa/e84/1580772538649.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -1872,8 +1883,13 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Conveniently, we found an equation two questions ago that can help us with this!\n\n\n\nHere m is the time it takes for both Bob and Ann to mow the lawn together.  Solve this for m by first combining the fractions on the right: \n\n\n\n\n\nThe amount of time it takes them to mow the lawn together is m, which equal 8 minutes. \n\n\nClick here to see forum posts about this lesson!",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/263/f9e/545/1578329938413.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/be9/07b/7b3/1578329990487.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c83/d59/32f/1578330006192.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/4fa/ca3/c9a/1578330023324.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -1888,8 +1904,11 @@
       "questionImageUrl": "",
       "answer": "E",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The units here are a bit confusing, because the miles per hour here is not the rate; on the other hand, it takes the same job as did the unit of time that we had in previous questions.  Before, we had pools per minute; here, we have electricity usage per change in speed (mph).  \n\nOnce we have identified what units we want, writing the rate equation is easier.  The rate of the generator counteracts",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/0c1/b44/1eb/1580772733911.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/917/57d/0b5/1578330201588.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -1904,7 +1923,7 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don’t worry, being right or wrong is not the most important thing in learning! These challenges are meant to be strange and hard, and just give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -1920,7 +1939,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "The relationship between number of pirates and the time it takes is inverse, which means that the more pirates you have, the less time it takes.  The more bottles are drunk, the more time it takes; this is called a direct relationship. Choices iii.) and v.) don't make sense, but choices i.), ii.) and iv.) do make sense.Click here to see forum posts about this lesson!",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -1936,8 +1955,11 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let’s use these two rules to change the numbers of pirates in our problem: \n\n\nIf you reduce the number of pirates by dividing by n, then the time it takes for them to consume the milkshakes multiplies by n.   \nIf you increase the number of pirates by multiplying by n, then the time it takes for them to drink the same amount of milkshake divides by n.  \nIf you divide the number of milkshakes by n,",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/53c/4f1/1f7/1580778842267.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7d4/58c/a5a/1580778872627.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -1952,7 +1974,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don’t worry. Even though this challenge is related to the one you just saw, it has a twist, to give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -1968,8 +1990,16 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let’s find out the rate at which one anteater eats ants, and compare it to the rate at which one armadillo eats ants.   Use the rule that if the ants increase, the time increases in the same ratio, but if the anteaters decrease, the time decreases at the same ratio. \n\n\n\n\n\n\n\n\n\n\n\nAn armadillo eats 4 ants in 1 minute, which is faster than the anteater’s rate of eating ants (3 ants per minute)!\n\n\nClic",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e31/4bc/c27/1580778945550.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/dba/064/af4/1580778974365.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/55e/46b/601/1580778996177.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/913/83d/37f/1580779049522.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/76c/409/5f4/1580779075756.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/cdb/90d/660/1580779093984.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/d17/0a5/080/1580779107364.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -1984,8 +2014,14 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let’s use these two rules to change the numbers of pirates in our problem: \n\n\nIf you reduce the number of pirates by dividing by n, then the time it takes for them to consume the milkshakes multiplies by n.   \nIf you increase the number of pirates by multiplying by n, then the time it takes for them to drink the same amount of milkshake divides by n.  \nIf you divide the number of milkshakes by n,",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/749/76d/813/1580779153123.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/52d/de7/a9f/1580779179701.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/950/084/ed6/1580779211812.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/8da/813/435/1580779254320.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/1c8/bd4/cda/1580779274404.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2000,7 +2036,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don’t worry, being right or wrong is not the most important thing in learning! These challenges are meant to be strange and hard, and just give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -2016,8 +2052,13 @@
       "questionImageUrl": "",
       "answer": "D",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's look at the units of the quantities in each equation.  That will help us to figure out which equations don't make sense. Let's use these units: hours for time, miles for distance, and miles per hour for the rate. \nChoice i.) would be , which doesn't make sense. \nChoice ii.) would be , which doesn't make sense. \nChoice iii.) would be , which doesn't make sense. \nChoice iv.) would be . The mil",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/9d3/8b4/20d/1578453114100.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/b2a/014/130/1578453285585.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/4e6/9a4/3f0/1578453425355.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/801/c60/2e1/1578453350369.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2032,8 +2073,14 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "First, divide both the top and bottom by d, to get: \n\n\n\nCombine the fractions in the denominator (the bottom) to get: \n\n\n\n\n\n\n\nClick here to see forum posts about this lesson!",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7e2/ae8/806/1578489892213.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/566/eb4/a09/1578489931065.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/dc8/112/f7d/1578489957674.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c24/835/9c6/1578489980564.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/8a3/c9a/bf3/1578490001728.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2048,8 +2095,13 @@
       "questionImageUrl": "",
       "answer": "E",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's think in terms of units!  Then we know that \n\n\n\nThe miles will cancel, and the hours goes to the top, so the final units will be hours. This is what we want. \nIn order to go 1 mile at 4 mph, it would take \n\n\n\nIn order to go 1 mile at 12 mph, it would take \n\n\n\n\nAre you stuck on how Prof. Loh simplified the expression ? This explanation might help!\n\nClick here to see forum posts about this les",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/cba/5cf/256/1578490159516.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/0db/aef/431/1578490275445.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/13d/0ef/b54/1578490310996.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/5bb/2bb/837/1588012865907.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2064,8 +2116,14 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Start with the formula from the end of the video: \n\n\n\nWork backwards to the form that was shown a few steps prior:\n\n\n\nCombine the bottom fractions with a common denominator:\n\n\n\n\nBring the ab to the top:\n\n\n\nThis is another form of the Harmonic Mean of two numbers, a and b!\n\n\nWhat's the purpose of the Harmonic Mean, anyway?  Good question!\n\nClick here to see forum posts about this lesson!\n\n© 2020 Co",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/f3a/abb/e5d/1578490438174.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/260/5d4/c85/1578490476142.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/d72/4b1/bd9/1578490514175.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/3f8/5df/45f/1578490536535.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/627/947/b40/1578490567831.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -2080,7 +2138,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don’t worry. Even though this challenge is related to the one you just saw, it has a twist, to give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -2096,8 +2154,18 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "We want to know how much the faster runner catches up to the slower runner per second, in terms of laps per second. This is equal to the difference in their speeds (in terms of laps per second): \n\n\n\nThe common denominator of these fractions is , so let's use this to combine our fractions into one fraction:\n\n\n\n\nCancel 3 from the top and bottom to get \n\n\n\nIf the bottom were , that would equal , but",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/d12/454/bde/1578521943475.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/8c6/740/a60/1578522042847.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7bb/726/410/1578522097448.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/363/12a/d3b/1578522147074.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/53d/5ef/f02/1578522173956.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/3c5/0ff/cfa/1580778716516.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/533/a51/e58/1580778690995.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/bf8/a62/eb9/1580778740940.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/d68/736/205/1578522241277.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2112,7 +2180,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "See the video for the explanation!Click here to see forum posts about this lesson!",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -2128,8 +2196,13 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Solution 1. The ratio of the distances they go is the inverse of the ratios of their lap times.  That makes sense intuitively; if you are twice as fast as your friend, you can cover twice the distance in the same amount of time.  The time it would take to cover this distance would be half the time it would take your friend. \nWith this idea, we can go straight to the expression , because this is th",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/575/ea2/0f6/1578524487227.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/0b2/b38/a90/1578524594265.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/63a/bd5/85f/1578524617442.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/2f6/344/9b3/1578524850363.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2144,8 +2217,22 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The distance in this question is the distance the slower runner goes before the faster runner catches up to him. \nThere are two ways to express this distance! The first way we found in the answer to the Part 3 question: . \n\nThe second way is to think about what it means for the faster runner to catch up to the slower runner.  You could pretend that the slow runner isn't moving at all, but just sit",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/fa2/8ce/a72/1578525153425.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/349/0e1/5ed/1578525288388.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/441/eb6/ce9/1578525318172.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c9b/0cc/ce7/1578525492181.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7ed/fcc/446/1578525576815.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c17/745/bb2/1578525596236.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/70e/d25/0d4/1578525656888.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e69/cb3/714/1578525684363.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/89a/d55/f8a/1578525703955.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/d6d/5b0/61e/1578525720486.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/374/e8d/4ba/1578525768481.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/a48/89c/50a/1578525822571.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/882/1ba/d2a/1578525852560.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2160,7 +2247,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don’t worry, being right or wrong is not the most important thing in learning! These challenges are meant to be strange and hard, and just give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -2176,7 +2263,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "If we do the subtraction 79 − 20, we get 59, but that is one short.  (To see why, you can try to see how many fingers are on one of your hands, by numbering the fingers* 1 through 5. If you subtract 1 from 5, though, you get 4, and you don't have four fingers, do you? We must add one to this.) We should add 1 to 59 to get 60 as our answer. *Technically, the thumb isn't a finger, but for the sake o",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -2192,8 +2279,14 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "We want to add the numbers from − 19 to 79, inclusive (that means including the numbers at the beginning and end).  These are the numbers:\n\n\n\nBut look! The numbers \n\n\n\ncancel out with \n\n\n\nleaving only \n\n\n\nThis is the same calculation we had in the video problem, so our answer is \n\n\n\nwhich equals 2970, choice i.) \n\n\nClick here to see forum posts about this lesson!",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/22a/00c/06b/1578692501774.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/113/62c/493/1578692460338.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/2d3/189/299/1578692612547.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c02/6ea/1bc/1578692640587.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/ca8/e79/86e/1578692723841.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2208,7 +2301,7 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Please see the video for the explanation!Click here to see forum posts about this lesson!",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -2224,8 +2317,10 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "If the times were in hours instead of minutes, you would go 12 miles in the first hour, 12 miles in the second hour, and 12 miles for each hour, and you would do this six times, so your total distance would be miles. Since our time is in minutes instead of hours, we should divide 72 by 60, which gives us 1.2 miles. \n\n\n\nClick here to see forum posts about this lesson!",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/147/e5a/1fe/1593713047742.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2240,7 +2335,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying! And if you didn't get the right answer, don’t worry. Even though this challenge is related to the one you just saw, it has a twist, to give you a place to practice thinking of your own ways to solve new problems. Continue on to the Explanation to uncover the math behind the challenge.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -2256,8 +2351,10 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The area of the triangle is half of the area of the rectangle, which has width equal to and height 60, so the answer is the first choice. \n\n\nClick here to see forum posts about this lesson!",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/486/135/f0b/1578693380127.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -2272,8 +2369,10 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The shape of the graph of the Porsche's speed in relation to time is a straight line, just like the one from the video problem. We want to find the distance it went, which is equal to the area under this slanted line, the shape of which is a triangle.  The height of the triangle is 60 and the width is 2.2 seconds, but we need to convert our units of distance from miles to feet, and convert our uni",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/ab0/a93/475/1578694092841.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
