@@ -94,6 +94,15 @@ Every single item has a quiz with 1 question.
 6. **Extract solution content** -- grab BOTH text and images (see below)
 7. Add entry to app data
 
+### Preserving Christopher's completion state
+Each quiz shows either a checkmark (100%) or no checkmark (0%/untaken) in the sidebar. This must be preserved:
+1. **Note the original state** before touching the quiz
+2. Answer correctly to extract the solution content
+3. **If the original was 0%/untaken**: retake the quiz and intentionally answer wrong to reset it back to 0%
+4. **If the original was 100%**: no need to reset, it's already correct
+
+Also track this in the challenge data -- the `promoted` field is for spaced rep flagging, but the original pass/fail state is useful context.
+
 ### Auto-solve
 Claude should solve the math problems and auto-select answers without asking the user. The questions are typically:
 - Multiple choice with roman numeral options (i through v or vi)
