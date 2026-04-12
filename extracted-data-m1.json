@@ -85,6 +85,34 @@
         {"q": 7, "title": "Your Turn Explanation 1/2", "correct": "B", "fufu": "0%", "images": 4},
         {"q": 8, "title": "Your Turn Explanation 2/2", "correct": "A", "fufu": "0%", "images": 6}
       ]
+    },
+    {
+      "day": 7,
+      "topic": "Changing Percentages",
+      "week": 2,
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "B", "fufu": "100%", "images": 0},
+        {"q": 2, "title": "Challenge Explanation 1/4", "correct": "A", "fufu": "100%", "images": 2},
+        {"q": 3, "title": "Challenge Explanation 2/4", "correct": "D", "fufu": "0%", "images": 2},
+        {"q": 4, "title": "Challenge Explanation 3/4", "correct": "D", "fufu": "100%", "images": 3},
+        {"q": 5, "title": "Challenge Explanation 4/4", "correct": "A", "fufu": "0%", "images": 4},
+        {"q": 6, "title": "Your Turn", "correct": "C", "fufu": "0%", "images": 0},
+        {"q": 7, "title": "Your Turn Explanation 1/2", "correct": "A", "fufu": "0%", "images": 7},
+        {"q": 8, "title": "Your Turn Explanation 2/2", "correct": "B", "fufu": "100%", "images": 3}
+      ]
+    },
+    {
+      "day": 8,
+      "topic": "Undoing Percentages",
+      "week": 2,
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "B", "fufu": "100%", "images": 0},
+        {"q": 2, "title": "Challenge Explanation 1/2", "correct": "B", "fufu": "100%", "images": 4},
+        {"q": 3, "title": "Challenge Explanation 2/2", "correct": "F", "fufu": "0%", "images": 0},
+        {"q": 4, "title": "Your Turn", "correct": "A", "fufu": "0%", "images": 0},
+        {"q": 5, "title": "Your Turn Explanation 1/2", "correct": "C", "fufu": "0%", "images": 5},
+        {"q": 6, "title": "Your Turn Explanation 2/2", "correct": "A", "fufu": "100%", "images": 7}
+      ]
     }
   ]
 }
