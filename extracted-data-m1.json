@@ -113,6 +113,65 @@
         {"q": 5, "title": "Your Turn Explanation 1/2", "correct": "C", "fufu": "0%", "images": 5},
         {"q": 6, "title": "Your Turn Explanation 2/2", "correct": "A", "fufu": "100%", "images": 7}
       ]
+    },
+    {
+      "day": 9,
+      "topic": "Business Accounting",
+      "week": 3,
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "C", "fufu": "0%", "images": 0},
+        {"q": 2, "title": "Challenge Explanation 1/2", "correct": "B", "fufu": "100%", "images": 1},
+        {"q": 3, "title": "Challenge Explanation 2/2", "correct": "D", "fufu": "0%", "images": 3},
+        {"q": 4, "title": "Your Turn", "correct": "B", "fufu": "100%", "images": 0},
+        {"q": 5, "title": "Your Turn Explanation 1/4", "correct": "C", "fufu": "0%", "images": 0},
+        {"q": 6, "title": "Your Turn Explanation 2/4", "correct": "C", "fufu": "0%", "images": 0},
+        {"q": 7, "title": "Your Turn Explanation 3/4", "correct": "A", "fufu": "0%", "images": 3},
+        {"q": 8, "title": "Your Turn Explanation 4/4", "correct": "C", "fufu": "100%", "images": 1}
+      ]
+    },
+    {
+      "day": 10,
+      "topic": "Estimating Profit",
+      "week": 3,
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "C", "fufu": "0%", "images": 0},
+        {"q": 2, "title": "Challenge Explanation 1/2", "correct": "B", "fufu": "100%", "images": 5},
+        {"q": 3, "title": "Challenge Explanation 2/2", "correct": "E", "fufu": "0%", "images": 3},
+        {"q": 4, "title": "Your Turn", "correct": "C", "fufu": "100%", "images": 0},
+        {"q": 5, "title": "Your Turn Explanation 1/3", "correct": "A", "fufu": "0%", "images": 4},
+        {"q": 6, "title": "Your Turn Explanation 2/3", "correct": "D", "fufu": "0%", "images": 11},
+        {"q": 7, "title": "Your Turn Explanation 3/3", "correct": "A", "fufu": "100%", "images": 8}
+      ]
+    },
+    {
+      "day": 11,
+      "topic": "Gear Ratios",
+      "week": 3,
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "B", "fufu": "0%", "images": 0},
+        {"q": 2, "title": "Challenge Explanation 1/3", "correct": "A", "fufu": "100%", "images": 3},
+        {"q": 3, "title": "Challenge Explanation 2/3", "correct": "F", "fufu": "0%", "images": 9},
+        {"q": 4, "title": "Challenge Explanation 3/3", "correct": "D", "fufu": "100%", "images": 1},
+        {"q": 5, "title": "Your Turn", "correct": "A", "fufu": "0%", "images": 0},
+        {"q": 6, "title": "Your Turn Explanation 1/4", "correct": "B", "fufu": "100%", "images": 2},
+        {"q": 7, "title": "Your Turn Explanation 2/4", "correct": "C", "fufu": "100%", "images": 1},
+        {"q": 8, "title": "Your Turn Explanation 3/4", "correct": "B", "fufu": "100%", "images": 4},
+        {"q": 9, "title": "Your Turn Explanation 4/4", "correct": "E", "fufu": "100%", "images": 3}
+      ]
+    },
+    {
+      "day": 12,
+      "topic": "Winning Ratios",
+      "week": 3,
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "A", "fufu": "100%", "images": 0},
+        {"q": 2, "title": "Challenge Explanation 1/3", "correct": "C", "fufu": "100%", "images": 0},
+        {"q": 3, "title": "Challenge Explanation 2/3", "correct": "E", "fufu": "100%", "images": 9},
+        {"q": 4, "title": "Challenge Explanation 3/3", "correct": "A", "fufu": "100%", "images": 8},
+        {"q": 5, "title": "Your Turn", "correct": "C", "fufu": "100%", "images": 0},
+        {"q": 6, "title": "Your Turn Explanation 1/2", "correct": "D", "fufu": "100%", "images": 4},
+        {"q": 7, "title": "Your Turn Explanation 2/2", "correct": "D", "fufu": "100%", "images": 8}
+      ]
     }
   ]
 }
