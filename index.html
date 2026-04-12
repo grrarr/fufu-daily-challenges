@@ -637,6 +637,12 @@
               <button className="btn-edit" onClick={e => { e.stopPropagation(); onEdit(); }}>Edit</button>
               <button className="btn-delete" onClick={e => { e.stopPropagation(); onDelete(); }}>Delete</button>
             </div>
+            {c.quizUrl && (
+              <a href={'https://daily.poshenloh.com' + c.quizUrl} target="_blank" rel="noopener"
+                 style={{fontSize: '0.75em', color: '#4da6ff', marginTop: 8, display: 'inline-block'}}>
+                View on PSL
+              </a>
+            )}
           </div>
         )}
 
@@ -708,6 +714,10 @@
           <label>Solution Image URLs (one per line)</label>
           <textarea rows="2" value={(form.solutionImageUrls || []).join('\n')} onChange={e => set('solutionImageUrls', e.target.value.split('\n').filter(u => u.trim()))} />
         </div>
+        <div className="form-group" style={{marginBottom: 10}}>
+          <label>Quiz URL (path only, e.g. /courses/take/...)</label>
+          <input type="text" value={form.quizUrl || ''} onChange={e => set('quizUrl', e.target.value)} />
+        </div>
         <div className="form-buttons">
           <button className="btn-add" onClick={() => onSave(form)}>Save</button>
           <button className="btn-reset" onClick={onCancel}>Cancel</button>
@@ -723,7 +733,7 @@
       question: '', questionImageUrl: '',
       answer: '', answerImageUrl: '',
       solutionSteps: '', solutionImageUrls: [],
-      dateAdded: TODAY, promoted: false, fufuOriginalScore: '',
+      dateAdded: TODAY, promoted: false, fufuOriginalScore: '', quizUrl: '',
     };
     const [form, setForm] = useState(empty);
     const set = (k, v) => setForm(prev => ({ ...prev, [k]: v }));
@@ -791,6 +801,10 @@
         <div className="form-group" style={{marginBottom: 10}}>
           <label>Solution Image URLs (one per line)</label>
           <textarea rows="2" placeholder="https://...&#10;https://..." value={(form.solutionImageUrls || []).join('\n')} onChange={e => set('solutionImageUrls', e.target.value.split('\n').filter(u => u.trim()))} />
+        </div>
+        <div className="form-group" style={{marginBottom: 10}}>
+          <label>Quiz URL (path only, e.g. /courses/take/...)</label>
+          <input type="text" placeholder="/courses/take/..." value={form.quizUrl} onChange={e => set('quizUrl', e.target.value)} />
         </div>
 
         <div className="form-row">
