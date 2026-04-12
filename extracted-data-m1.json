@@ -1,0 +1,62 @@
+{
+  "module": 1,
+  "moduleName": "Algebra Basics",
+  "extractedAt": "2026-04-12",
+  "days": [
+    {
+      "day": 1,
+      "topic": "Fraction Gymnastics",
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "A", "fufu": "0%", "images": 0, "solutionText": ""},
+        {"q": 2, "title": "Challenge Explanation 1/3", "correct": "B", "fufu": "100%", "images": 1, "solutionImageUrls": ["https://files.cdn.thinkific.com/file_uploads/170860/images/ad9/120/d21/1580521696370.jpg"], "solutionText": "There's a repeating decimal, 0.33333..., that looks familiar here! Let's separate it out and combine it back again into a single fraction:"},
+        {"q": 3, "title": "Challenge Explanation 2/3", "correct": "SKIPPED", "fufu": "100%", "images": 0, "solutionText": ""},
+        {"q": 4, "title": "Challenge Explanation 3/3", "correct": "SKIPPED", "fufu": "100%", "images": 0, "solutionText": ""},
+        {"q": 5, "title": "Your Turn", "correct": "B", "fufu": "100%", "images": 2, "solutionImageUrls": ["https://files.cdn.thinkific.com/file_uploads/170860/images/2b2/382/9ac/1585847421442.jpg", "https://files.cdn.thinkific.com/file_uploads/170860/images/ba1/a78/c3f/1585847444620.jpg"], "solutionText": "Good job on trying! And if you didn't get the right answer, don't worry..."},
+        {"q": 6, "title": "Your Turn Explanation 1/2", "correct": "B", "fufu": "100%", "images": 1, "solutionImageUrls": ["https://files.cdn.thinkific.com/file_uploads/170860/images/b3c/0bf/96b/1577068141839.jpg"], "solutionText": "Let's turn all of the fractions into fractions which have the same denominator of n(n+1), and then simplify:"},
+        {"q": 7, "title": "Your Turn Explanation 2/2", "correct": "C", "fufu": "100%", "images": 2, "solutionImageUrls": ["https://files.cdn.thinkific.com/file_uploads/170860/images/942/16e/d94/1577068379303.jpg", "https://files.cdn.thinkific.com/file_uploads/170860/images/b4b/1ca/a25/1577068406919.jpg"], "solutionText": "Solution 1: Convert to decimals:\nSolution 2: Find the least common denominator:"}
+      ]
+    },
+    {
+      "day": 2,
+      "topic": "Continued Fraction",
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "C", "fufu": "100%", "images": 3, "solutionImageUrls": ["https://files.cdn.thinkific.com/file_uploads/170860/images/eb2/255/665/1585847543778.jpg", "https://files.cdn.thinkific.com/file_uploads/170860/images/5f6/349/62d/1585847567884.jpg", "https://files.cdn.thinkific.com/file_uploads/170860/images/74c/c19/375/1585847594891.jpg"], "solutionText": ""},
+        {"q": 2, "title": "Challenge Explanation 1/4", "correct": "A", "fufu": "100%", "images": 3, "solutionImageUrls": ["https://files.cdn.thinkific.com/file_uploads/170860/images/a05/f00/37a/1577069313681.jpg", "https://files.cdn.thinkific.com/file_uploads/170860/images/e91/405/fe9/1577069336192.jpg", "https://files.cdn.thinkific.com/file_uploads/170860/images/67c/950/b91/1577069376536.jpg"], "solutionText": "The first step is to find a common denominator for the fractions under the large fraction:"},
+        {"q": 3, "title": "Challenge Explanation 2/4", "correct": "A", "fufu": "100%", "images": 1, "solutionText": "The neat thing here is that since the sub-fractions continue on forever until infinity, removing one layer of the fractions means that we still have an expression with infinite sub-fractions."},
+        {"q": 4, "title": "Challenge Explanation 3/4", "correct": "A", "fufu": "0%", "images": 3, "solutionText": "Let's use the equation from the previous question:"},
+        {"q": 5, "title": "Challenge Explanation 4/4", "correct": "D", "fufu": "0%", "images": 9, "solutionText": "The formula given in the beginning tells us that..."},
+        {"q": 6, "title": "Your Turn", "correct": "B", "fufu": "100%", "images": 0, "solutionText": ""},
+        {"q": 7, "title": "Your Turn Explanation 1/2", "correct": "B", "fufu": "100%", "images": 11, "solutionText": "The neat thing is that it doesn't matter which order they eat the slices in, because either way, of the pizza would remain!"},
+        {"q": 8, "title": "Your Turn Explanation 2/2", "correct": "B", "fufu": "100%", "images": 3, "solutionText": "After Alice eats the pizza, there is of the pizza left. Then Bob eats of what is left..."}
+      ]
+    },
+    {
+      "day": 3,
+      "topic": "Comparing Fractions",
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "B", "fufu": "100%", "images": 2},
+        {"q": 2, "title": "Challenge Explanation 1/4", "correct": "B", "fufu": "100%", "images": 1},
+        {"q": 3, "title": "Challenge Explanation 2/4", "correct": "B", "fufu": "0%", "images": 5},
+        {"q": 4, "title": "Challenge Explanation 3/4", "correct": "C", "fufu": "100%", "images": 5},
+        {"q": 5, "title": "Challenge Explanation 4/4", "correct": "D", "fufu": "0%", "images": 6},
+        {"q": 6, "title": "Your Turn", "correct": "A", "fufu": "100%", "images": 2},
+        {"q": 7, "title": "Your Turn Explanation 1/2", "correct": "D", "fufu": "0%", "images": 2},
+        {"q": 8, "title": "Your Turn Explanation 2/2", "correct": "B", "fufu": "100%", "images": 2}
+      ]
+    },
+    {
+      "day": 4,
+      "topic": "Sports Averages",
+      "quizzes": [
+        {"q": 1, "title": "Something to Think About", "correct": "A", "fufu": "100%", "images": 0},
+        {"q": 2, "title": "Challenge Explanation 1/4", "correct": "A", "fufu": "0%", "images": 6},
+        {"q": 3, "title": "Challenge Explanation 2/4", "correct": "D", "fufu": "0%", "images": 8},
+        {"q": 4, "title": "Challenge Explanation 3/4", "correct": "C", "fufu": "0%", "images": 3},
+        {"q": 5, "title": "Challenge Explanation 4/4", "correct": "E", "fufu": "0%", "images": 9},
+        {"q": 6, "title": "Your Turn", "correct": "C", "fufu": "100%", "images": 3},
+        {"q": 7, "title": "Your Turn Explanation 1/2", "correct": "D", "fufu": "100%", "images": 4},
+        {"q": 8, "title": "Your Turn Explanation 2/2", "correct": "B", "fufu": "0%", "images": 13}
+      ]
+    }
+  ]
+}
