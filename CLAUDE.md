@@ -133,13 +133,25 @@ The solution page often contains a mix of:
 
 ## PSL curriculum structure
 
-- **Module 0**: Introduction
+- **Module 0**: Introduction (skip for now -- not extracting)
 - **Module 1**: Algebra Basics
 - **Module 2**: Geometry Tools
 - **Module 3**: Algebra Tools
-- **Module 4**: Combinatorics Tools
-- **Module 5**: Number Theory Tools
-- Each module has 4 weeks, each week has multiple lesson days with daily challenges
+- **Module 4**: Combinatorics Tools (15% complete -- not extracting yet)
+- **Module 5**: Number Theory Tools (0% -- not extracting yet)
+- **Workout 1A**: Algebra Basics
+- **Workout 1B**: Algebra Basics
+- Each module/workout has 4 weeks, each week has ~5 lesson days with daily challenges
+
+### Extraction scope
+Currently extracting from completed/near-completed sections only:
+- Modules 1, 2, 3
+- Workouts 1A, 1B
+
+### Extraction tracker
+`extraction-tracker.xlsx` -- spreadsheet with one row per day across all in-scope modules/workouts.
+Columns: Module/Workout, Week, Day, Day Topic, Quizzes, Extracted, Fufu Score, Notes.
+Filterable by Module/Workout column. Update this as extraction progresses.
 
 ---
 
@@ -176,3 +188,10 @@ The solution page often contains a mix of:
 - Add tab: form for all fields
 - Inline editing on expanded cards
 - Export/Import JSON buttons in header
+
+---
+
+## Other files
+
+- `extraction-tracker.xlsx` -- Progress tracker for extraction across modules/workouts
+- `fufu-daily-challenges-data.json` -- GitHub-synced data file (auto-created on first sync)
