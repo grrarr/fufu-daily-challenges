@@ -625,7 +625,7 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -641,7 +641,7 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "The building's shadow is 125 feet long, so the proportions in choice i.) match 2:5. The building plus its antennae give a shadow that is 150 feet long, so choice ii.) also matches. The third choice doesn't match.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -657,8 +657,12 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "There are no dimensions given, but without loss of generality, we can call them 2 and 5. Then the shadow is of length 3 and the height will be...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/8bc/f1c/7a7/M1W2D5-ch-part-2-solution-ratio-5-2.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/654/79b/90f/1580610925266.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/ac7/7d8/0a9/1580610994534.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -673,8 +677,12 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The length of the photograph is times its width. The difference in length will be proportional to the difference in width by the same ratio.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/3ad/272/a6e/1580613103245.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7aa/d94/5e9/1580613165856.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/5d6/b88/9bf/1580613192858.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -689,7 +697,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -705,8 +713,12 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "In this problem, we are relating distance and amount of gas. We only know how much more gas it takes to travel an additional number of miles.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/640/868/2a7/1580572577952.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/5e0/fcc/dca/M1W2D5-y-part-1-chicago-baltimore-distance-solution1.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/5a2/36d/cf8/M1W2D5-y-part-1-chicago-baltimore-distance-solution-seven-ticks.png"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -721,7 +733,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -737,7 +749,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "See the video explanation to find out why!",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -753,8 +765,10 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "We know from the previous question that... so the first two choices cannot have the same dimensions.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e78/3e9/346/1593091263887.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -769,8 +783,14 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's suppose that it is possible to find a 3-D box that has all sides with width and length in the same ratio.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/57f/1d3/d0d/1580587918714.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/474/1a6/75b/1580577148193.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7ba/cd9/d81/1580577170827.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/905/779/d91/M1W2D6-ch-part-3-3d-box-2a.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/d6f/6c7/9c3/1580587959905.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -785,8 +805,17 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "How does the number of germs increase from one hour to the...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/013/95e/bf5/1580590994546.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/2ae/588/f73/1580591040068.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/fcf/5d1/13c/1580591077185.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/9e7/145/6f6/M1W2D6-ch-part-4-germs-solution2.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/1bc/1dc/0b3/M1W2D6-ch-part-4-germs-solution3.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/52d/5a1/80e/1580591673160.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e94/dcb/fb4/1580591738581.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/184/18a/9d6/1580591841320.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -801,7 +830,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -817,8 +846,13 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "From the video, we saw that we should make enough of the recipe to match with the ingredient that has been added by too much.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/044/14f/80b/1580613890678.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/f1c/63d/d9b/1580613923996.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/ae2/5d6/607/1580614078768.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/47b/0d3/d9f/1580614153022.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -833,8 +867,14 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "We have as much yellow as we need for one recipe, times as much green, and times as much blue. We should make an amount corresponding to the color we put too much of.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/a15/9ba/478/1580614296861.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/f6f/169/13f/1580614324308.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e1e/b95/66f/1580614349793.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/b78/16d/0cc/1579490866871.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/229/821/ca6/1579490940603.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -849,7 +889,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -865,8 +905,11 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "100% of N equals N, so 200% of N equals 2N. This is the amount of increase, so our total becomes...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/de1/0df/043/1580614478387.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/7f7/4b3/dbe/1580616056595.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -881,8 +924,11 @@
       "questionImageUrl": "",
       "answer": "D",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Let's express 10% as a fraction: It also equals 0.1. Then 10% of N equals 0.1N, and adding this back to N, we get...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/167/f57/d58/1578431918680.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/f58/9bd/90a/1578431989453.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -897,8 +943,12 @@
       "questionImageUrl": "",
       "answer": "D",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "We saw that 30% equals... so 24% equals... This is the amount that N decreases by, so the new number is...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/955/f05/40f/1580616232507.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/042/689/2eb/1580616273689.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/dda/011/485/1580616357407.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -913,8 +963,13 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "A decrease of a number N would turn the number into... An increase of 10% would make 1.1 times its previous value. The 11's and 10's cancel out, leaving N. The number doesn't change! Works for any number - infinite numbers.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/1f0/5ea/347/1578696629260.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/5c7/9e4/ca4/1578696667581.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/1e5/72e/1f1/1578696739321.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/79d/9aa/47e/1578696782619.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -929,7 +984,7 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -945,8 +1000,15 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The nice thing is that it doesn't matter what our starting number is. The number gets doubled, reduced by 20%, increased by 60%, reduced by P% twice...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/88d/fbb/693/1580616599654.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/04a/c66/e21/1580616637837.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/873/de0/120/1580616681996.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/ac2/10d/f74/1580616793170.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c7c/805/5d0/1580616734686.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/4ee/725/afa/1580616814154.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -961,8 +1023,12 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "Initially, Bob and Ann are the same height. Bob's height increases by 10% in one single growth spurt. In the first part, Bob increases by 4% which is also true for Ann.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/5a9/0a6/bf0/M1W2D7-bob-ann-before.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/0d7/368/546/M1W2D7-bob-ann-4-percent.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/db2/a5d/335/M1W2D7-bob-ann-10-percent.png"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -977,7 +1043,7 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -993,8 +1059,13 @@
       "questionImageUrl": "",
       "answer": "B",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The important thing to realize is that the commission is not 2.5% of the total price. It is equal to 2.5% of the car price, which is less than $41,000.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/2fe/e3b/acb/M1W2D8-ch-part-1-car-solution.png",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/6fd/616/637/1580671050817.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/86e/110/f8e/1580671111662.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/9a2/047/cb5/1580671147952.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
@@ -1009,7 +1080,7 @@
       "questionImageUrl": "",
       "answer": "F",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Writing this as a fraction, we get 12.5% = 9/8, so to undo a 12.5% increase, we would need to multiply by 8/9, so we want to decrease by 1/9, which equals 11.11%.",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -1025,7 +1096,7 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
+      "solutionSteps": "Good job on trying!...",
       "solutionImageUrls": [],
       "dateAdded": "2026-04-12",
       "promoted": false,
@@ -1041,8 +1112,14 @@
       "questionImageUrl": "",
       "answer": "C",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "A price increase corresponds to multiplying a number by 5; to undo this, we should multiply by 1/5, which equals 20%.",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/333/441/e84/1580671401946.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e5a/8a2/adb/1580671319058.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/fdf/c86/690/1580671347262.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/530/5ff/489/1580671363244.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/b63/37c/793/1580671382584.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "0%"
@@ -1057,8 +1134,16 @@
       "questionImageUrl": "",
       "answer": "A",
       "answerImageUrl": "",
-      "solutionSteps": "",
-      "solutionImageUrls": [],
+      "solutionSteps": "The approximation to... is... so our number is reduced by... which means we multiply by... To undo this, we should multiply by...",
+      "solutionImageUrls": [
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/e81/eba/b27/1580671446838.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/a77/6b8/0ac/1580671462770.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/4d2/aa2/6bb/1580671476067.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/c5e/5a0/15e/1580671506807.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/068/7bd/03b/1580671528536.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/dac/c5c/304/1580671551745.jpg",
+        "https://files.cdn.thinkific.com/file_uploads/170860/images/86b/44e/683/1580671570252.jpg"
+      ],
       "dateAdded": "2026-04-12",
       "promoted": false,
       "fufuOriginalScore": "100%"
