@@ -282,7 +282,7 @@
   function App() {
     const [data, setData] = useState(null);
     const [tab, setTab] = useState('browse'); // browse | add
-    const [expandedId, setExpandedId] = useState(null);
+    const [expandedIds, setExpandedIds] = useState(new Set());
     const [editId, setEditId] = useState(null);
 
     // Filters
@@ -402,7 +402,7 @@
       if (!confirm('Delete this challenge?')) return;
       const newData = { challenges: challenges.filter(c => c.id !== id) };
       updateData(newData);
-      if (expandedId === id) setExpandedId(null);
+      setExpandedIds(prev => { const s = new Set(prev); s.delete(id); return s; });
     }
 
     function exportJSON() {
@@ -541,6 +541,10 @@
                 onChange={e => setSearchText(e.target.value)}
               />
               <span className="filter-count">{filtered.length} / {challenges.length}</span>
+              <button style={{padding:'4px 8px', background:'#1a1f3a', border:'1px solid #444', color:'#ccc', borderRadius:'4px', cursor:'pointer', fontSize:'0.75em'}}
+                onClick={() => setExpandedIds(new Set(filtered.map(c => c.id)))}>Expand All</button>
+              <button style={{padding:'4px 8px', background:'#1a1f3a', border:'1px solid #444', color:'#ccc', borderRadius:'4px', cursor:'pointer', fontSize:'0.75em'}}
+                onClick={() => setExpandedIds(new Set())}>Collapse All</button>
             </div>
 
             {/* Cards */}
@@ -553,9 +557,13 @@
               <ChallengeCard
                 key={c.id}
                 challenge={c}
-                expanded={expandedId === c.id}
+                expanded={expandedIds.has(c.id)}
                 editing={editId === c.id}
-                onToggle={() => setExpandedId(expandedId === c.id ? null : c.id)}
+                onToggle={() => setExpandedIds(prev => {
+                  const s = new Set(prev);
+                  if (s.has(c.id)) s.delete(c.id); else s.add(c.id);
+                  return s;
+                })}
                 onPromote={() => updateChallenge(c.id, { promoted: !c.promoted })}
                 onDelete={() => deleteChallenge(c.id)}
                 onEdit={() => setEditId(editId === c.id ? null : c.id)}
