@@ -84,24 +84,69 @@ Every single item has a quiz with 1 question.
 **Case 2: New/untaken** (no checkmark)
 - Shows the video + quiz directly
 
-### Per-quiz extraction flow
+### Programmatic extraction (via Claude in Chrome JS)
 
-1. **Video page loads** -- skip video to the end (scrub progress bar to right)
-2. **Question appears** as an image on blue background at end of video -- screenshot this (question image)
-3. **Scroll down** below the video to see multiple choice answers (A/B/C/D/E with roman numerals i/ii/iii/iv/v)
-4. **Select the correct answer** and click **CONFIRM** (Claude auto-solves, no need to ask user)
-5. **Solution page appears** -- "This answer is correct." followed by detailed worked solution
-6. **Extract solution content** -- grab BOTH text and images (see below)
-7. Add entry to app data
+Each step is a separate JS call with waits between (page navigation resets window objects).
+
+**Step 1: Navigate to quiz URL**
+```js
+// Navigate via Chrome MCP navigate tool
+```
+
+**Step 2: Detect state + record Fufu score (wait 5s after nav)**
+```js
+const t = (document.querySelector('main') || document.body).innerText;
+const wasCompleted = t.includes('You completed');
+const fufuScore = t.includes('100%') && wasCompleted ? '100%' : (wasCompleted ? '0%' : 'untaken');
+// fufuScore goes in Excel tracker
+```
+
+**Step 3: Click View Again if completed (wait 4s after)**
+```js
+for (const b of document.querySelectorAll('button, a')) {
+  if (b.textContent.trim().includes('View Again')) { b.click(); break; }
+}
+```
+
+**Step 4: Scroll down to reveal answers (wait 1.5s after)**
+```js
+window.scrollTo(0, 9999);
+```
+
+**Step 5: Click answer A (wait 1s after)**
+```js
+document.querySelectorAll('div[role="radio"]')[0].click();
+```
+
+**Step 6: Click Confirm -- case insensitive (wait 3s after)**
+```js
+for (const b of document.querySelectorAll('button')) {
+  if (b.textContent.trim().toLowerCase() === 'confirm') { b.click(); break; }
+}
+```
+
+**Step 7: Extract solution data**
+```js
+window.scrollTo(0, 0);
+const t = (document.querySelector('main') || document.body).innerText;
+const correctMatch = t.match(/correct answer is '([A-Z])'/i);
+const correct = correctMatch ? correctMatch[1] : (t.includes('answer is correct') ? 'A' : 'UNKNOWN');
+const resultMatch = t.match(/This answer is (?:in)?correct\.?\s*(?:The correct answer is '[A-Z]'\s*\.?\s*)?([\s\S]*?)(?:\u00a9|Copyright|Click here|Next\b)/i);
+const solutionText = resultMatch ? resultMatch[1].trim() : '';
+const imgs = (document.querySelector('main') || document.body).querySelectorAll('img');
+const imageUrls = Array.from(imgs).map(i => i.src).filter(u => (u.includes('thinkific') || u.includes('cdn')) && !u.includes('logo'));
+```
+
+**Step 8: Advance to next quiz**
+```js
+for (const b of document.querySelectorAll('button')) {
+  const t = b.textContent.trim().toLowerCase();
+  if (t === 'next' || t === 'continue') { b.click(); break; }
+}
+```
 
 ### Preserving Christopher's completion state
-Each quiz shows either a checkmark (100%) or no checkmark (0%/untaken) in the sidebar. This must be preserved:
-1. **Note the original state** before touching the quiz
-2. Answer correctly to extract the solution content
-3. **If the original was 0%/untaken**: retake the quiz and intentionally answer wrong to reset it back to 0%
-4. **If the original was 100%**: no need to reset, it's already correct
-
-Also track this in the challenge data -- the `promoted` field is for spaced rep flagging, but the original pass/fail state is useful context.
+No need to reset quiz state. Just record fufuOriginalScore (100% or 0%/untaken) in the Excel tracker before extracting.
 
 ### Auto-solve
 Claude should solve the math problems and auto-select answers without asking the user. The questions are typically:
@@ -124,8 +169,13 @@ The solution page often contains a mix of:
 - A single solution page may have 2+ images (e.g., Solution 1 image + Solution 2 image)
 
 ### Key observations
+- DOM selectors: Answer options are `div[role="radio"]` with class `course-player__interactive-checkbox`. Click by index (0=A, 1=B, etc.)
+- Button text is mixed case ("Confirm" not "CONFIRM", "Next" not "NEXT") -- always use case-insensitive matching
+- Video jump to end: `const iframe = document.querySelector('iframe[src*="play"]'); const vid = iframe.contentDocument.querySelector('video'); vid.currentTime = vid.duration - 3; vid.pause();`
+- Wrong answers still show the solution and state the correct answer letter
+- Page navigation resets all JS window objects -- cannot persist helpers across pages
+- Fufu's original scores tracked in extraction-tracker.xlsx, not in the app
 - Questions are displayed as **images on blue background** at the end of videos -- typically need screenshot
-- Answer choices below video are **text** (roman numerals mapping to values shown in question image)
 - Solutions after answering correctly contain **actual `<img>` elements** with CDN URLs -- grab these directly
 - Solution pages often have multiple solution approaches (Solution 1, Solution 2) with separate images
 
@@ -141,7 +191,8 @@ The solution page often contains a mix of:
 - **Module 5**: Number Theory Tools (0% -- not extracting yet)
 - **Workout 1A**: Algebra Basics
 - **Workout 1B**: Algebra Basics
-- Each module/workout has 4 weeks, each week has ~5 lesson days with daily challenges
+- Module 1 structure: 16 days across 4 weeks (4 days per week), not 5
+- Each module/workout has 4 weeks with daily challenges
 
 ### Extraction scope
 Currently extracting from completed/near-completed sections only:
