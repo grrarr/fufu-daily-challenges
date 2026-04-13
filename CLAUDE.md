@@ -290,11 +290,11 @@ Filterable by Module/Workout column. Update this as extraction progresses.
 6. **GitHub sync working** -- PAT in localStorage, `fufu-daily-challenges-data.json` syncs both directions
 
 ### What's LACKING (priority order)
-1. **432 question poster images still needed** -- the main remaining task
-   - M2: all 126
-   - M3: all 157
+1. **432 question poster images still needed** -- next session order: **W1A → W1B → M3** (skip M2 for now)
    - W1A: ~57 explanation quiz posters
    - W1B: all 92
+   - M3: all 157
+   - M2: all 126 (deferred)
 2. **W1B challenges lack distinguishing marker** -- stored as `module: 0` same as W1A, no `quizUrl` field set. Need to add quizUrl or a workout field to tell W1A from W1B.
 3. **D9 enrichment gap** -- D9 challenges have minimal solution text ("see video" boilerplate from API)
 
