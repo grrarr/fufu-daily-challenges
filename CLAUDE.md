@@ -263,12 +263,12 @@ const imageUrls = Array.from(imgs).map(i => i.src);
 ### Extraction scope and quiz counts
 | Module/Workout | Quizzes | Solution text + images | Question poster images | Notes |
 |----------------|---------|----------------------|----------------------|-------|
-| M1 (Algebra Basics) | 123 | 123/123 DONE | 32/123 (STTA+YT only) | Missing 91 explanation quiz posters |
+| M1 (Algebra Basics) | 123 | 123/123 DONE | 123/123 DONE | All posters captured April 13 |
 | M2 (Geometry Tools) | 126 | 126/126 DONE | 0/126 | Not started |
 | M3 (Algebra Tools) | 157 | 157/157 DONE | 0/157 | Not started |
 | W1A (Algebra Basics) | 90 | 90/90 DONE | 33/90 (main Qs only) | Missing explanation quiz posters |
 | W1B (Algebra Basics) | 92 | 92/92 DONE | 0/92 | Not started |
-| **Total** | **588** | **588/588** | **65/588** | |
+| **Total** | **588** | **588/588** | **156/588** | |
 
 ### Extraction tracker
 `extraction-tracker.xlsx` -- spreadsheet with one row per day across all in-scope modules/workouts.
@@ -277,20 +277,20 @@ Filterable by Module/Workout column. Update this as extraction progresses.
 
 ---
 
-## Current status and next steps (as of 2026-04-12)
+## Current status and next steps (as of 2026-04-13)
 
 ### What's DONE
 1. **App built and deployed** -- `index.html` on GitHub Pages, fully functional browse/filter/expand UI
 2. **All 588 challenges extracted** -- M1 (123), M2 (126), M3 (157), W1A (90), W1B (92)
 3. **All 588 enriched with solution text + image URLs** -- via Thinkific quiz API batch fetch
-4. **65 question poster images captured** -- downloaded to `images/` folder, URLs point to GitHub raw content
-   - M1: 32 images (STTA + YT for each of 16 days): `M1-D{n}-stta-question.jpg`, `M1-D{n}-yt-question.jpg`
-   - W1A: 33 images (main questions Q1-Q33): `W1A-Q{n}-{topic}.jpg`
-5. **GitHub sync working** -- PAT in localStorage, `fufu-daily-challenges-data.json` syncs both directions
+4. **M1 poster images COMPLETE** -- all 123/123 have questionImageUrl (32 STTA+YT + 91 explanation quizzes)
+   - Images downloaded locally to `images/` folder, URLs point to GitHub raw content
+   - Naming: `M1-D{n}-stta-question.jpg`, `M1-D{n}-yt-question.jpg` (main), `M1-D{n}-Q{n}-question.jpg` (explanation)
+5. **W1A: 33 poster images** -- main questions only: `W1A-Q{n}-{topic}.jpg`
+6. **GitHub sync working** -- PAT in localStorage, `fufu-daily-challenges-data.json` syncs both directions
 
 ### What's LACKING (priority order)
-1. **523 question poster images still needed** -- the main remaining task
-   - M1: 91 explanation quiz posters (Challenge Explanation + Your Turn Explanation quizzes)
+1. **432 question poster images still needed** -- the main remaining task
    - M2: all 126
    - M3: all 157
    - W1A: ~57 explanation quiz posters
@@ -298,46 +298,104 @@ Filterable by Module/Workout column. Update this as extraction progresses.
 2. **W1B challenges lack distinguishing marker** -- stored as `module: 0` same as W1A, no `quizUrl` field set. Need to add quizUrl or a workout field to tell W1A from W1B.
 3. **D9 enrichment gap** -- D9 challenges have minimal solution text ("see video" boilerplate from API)
 
-### Poster capture -- what works and what failed
+### Poster capture -- proven approach (April 13, used for M1 91 quizzes)
 
-**What WORKS:**
-- Direct page navigation to quiz URL → wait for load → read `iframe[src*="play"].contentDocument.querySelector('img').src` → gives Wistia CDN poster URL (`https://embed-ssl.wistia.com/deliveries/{hash}.jpg`)
-- On "You completed" pages, the video iframe IS present and shows the poster -- no need to click View Again
-- Downloading JPG from Wistia URL and saving to `images/` folder locally
-
-**What FAILED (April 12 session):**
-- **Ember sidebar scrape**: Navigated 60 M1 quizzes via sidebar clicks (Ember transitions, no full page reload). Got 0 poster URLs. The completion pages loaded via Ember sidebar navigation don't always render the video iframe -- the poster image element isn't in the DOM.
-- **Play endpoint API** (`/api/course_player/v2/contents/{id}/play/{playId}`): Returns 404 for most quizzes. The playId is per-content-specific (not a global enrollment ID). Only worked for 1 quiz where we had the exact ID from a prior iframe src.
-
-**Recommended approach for next session (TESTED AND VERIFIED):**
-
-**Reading poster URL from page (confirmed working April 13):**
+**Reading poster URL from a quiz page:**
 ```js
 document.querySelector('iframe[src*="/play/"]').contentDocument.querySelector('img').src
 // Returns: https://embed-ssl.wistia.com/deliveries/{hash}.jpg
 ```
+- The outer iframe src is a Thinkific play URL, NOT a Wistia URL
+- The Wistia poster image is INSIDE the play iframe's contentDocument (same-origin, accessible)
+- Works on "You completed" pages -- the play iframe is present without clicking View Again
+- CRITICAL: Never click "View Again" -- it creates prereq chain holes
 
-**Key details:**
-- The outer iframe src is a Thinkific play URL (`/api/course_player/v2/contents/{id}/play/{playId}`), NOT a Wistia URL
-- The Wistia poster image is INSIDE the play iframe's contentDocument (same-origin, so accessible)
-- This works on "You completed" pages -- the play iframe is present without clicking View Again
-- Requires ~4s wait after sidebar click for the inner iframe content to load
+**Two-phase approach (fast sidebar scrape + direct nav for stragglers):**
 
-**Sidebar scrape approach (Ember sidebar clicks):**
-- Click sidebar quiz link → wait 4s → read poster from `iframe[src*="/play/"].contentDocument.querySelector('img').src`
-- DO NOT use tight polling loops (while + 150ms sleep) -- they interfere with Ember rendering and return null
-- Use simple sequential click → fixed wait → read pattern instead
-- ~5s per quiz, ~10 min for 123 quizzes
+**Phase 1: Fast sidebar scrape via setTimeout chain**
+1. Navigate to course page, open sidebar (hamburger menu)
+2. Get all quiz links from sidebar: `document.querySelectorAll('a[href*="quizzes"]')`
+3. Filter to target quizzes (e.g., `.filter(a => a.textContent.includes('Explanation'))`)
+4. Store full queue in `localStorage` under `__poster_queue`
+5. Run a setTimeout chain: click sidebar link → wait 4-5s → read iframe poster → save to localStorage → advance to next
+6. **Key: save every poster URL to localStorage immediately** (`__poster_collected` key) -- the setTimeout chain WILL stall every ~5-15 quizzes when Ember navigation breaks the chain
+7. When stalled (title stops updating), restart by reading localStorage to find next uncollected index and calling `window.__fastNext()` again
+8. Expect to restart 5-10 times per module -- each restart picks up 2-8 more posters
+9. After multiple passes, ~85-95% will be captured via sidebar
+10. Rate: ~4.5s per quiz when running, but stalls add overhead -- expect ~15-20 min total for 91 quizzes
 
-**Why the April 12 scrape failed (60 quizzes, 0 posters):** Used a tight polling while-loop (150ms intervals) that interfered with Ember's iframe rendering. The iframe contentDocument never populated. Manual testing with 4s fixed wait works 3/3 times.
+**Phase 2: Direct URL navigation for remaining stragglers**
+- For the last 5-15% that consistently fail via sidebar, navigate directly to each quiz URL via Chrome MCP navigate tool
+- Wait 6s for full page load (longer than sidebar because full page reload)
+- Read poster via same iframe JS
+- This is 100% reliable but slower (~8s per quiz)
+- Save to localStorage same as phase 1
+
+**What FAILS and why:**
+- **setInterval watchdog**: The interval stops firing after Ember sidebar navigation -- the interval callback simply never runs again
+- **Tight polling loops** (while + sleep): Interfere with Ember rendering, iframe contentDocument never populates
+- **Storing results only in window variables**: Page navigations wipe window state. ALWAYS use localStorage
+- **Play endpoint API** (`/api/course_player/v2/contents/{id}/play/{playId}`): Returns 404 -- playId is quiz-specific, not reusable
 
 **After collecting poster URLs:**
-- Download each poster JPG to `images/` folder on Dropbox
-- Update `questionImageUrl` in app data to GitHub raw content URLs  
-- Commit images + data, push
-- Image naming: `M1-D{day}-Q{n}-question.jpg` for all quizzes (not just stta/yt)
+1. Save poster URLs to a text file: `poster-urls-{module}.txt` (format: `quiz-slug|wistia-hash`)
+2. Use Python to match quiz slugs to challenge data (day + Q number)
+3. Generate download script: `curl -sL "https://embed-ssl.wistia.com/deliveries/{hash}" -o "images/M{mod}-D{day}-Q{n}-question.jpg"`
+4. Run download script to save all images to local `images/` folder
+5. Update `questionImageUrl` in data file to GitHub raw content URLs
+6. Commit images + data, git push
+7. Image naming: `M{mod}-D{day}-Q{n}-question.jpg`
 
-**CRITICAL: Never click "View Again" during poster scrape** -- it creates prereq chain holes. Read poster from the completion page directly.
+**Sidebar scrape code template (save to localStorage, restartable):**
+```js
+// Setup: get quiz links from sidebar, store in localStorage
+const links = document.querySelectorAll('a[href*="quizzes"]');
+const quizzes = Array.from(links)
+  .filter(a => a.textContent.trim().split('\n')[0].includes('Explanation'))
+  .map(a => a.getAttribute('href'));
+localStorage.setItem('__poster_queue', JSON.stringify(quizzes));
+
+// Scraper function
+window.__fastNext = function() {
+  const c = JSON.parse(localStorage.getItem('__poster_collected') || '{}');
+  const queue = JSON.parse(localStorage.getItem('__poster_queue') || '[]');
+  // Skip already collected
+  while (window.__fastIdx < queue.length && c[queue[window.__fastIdx]]) window.__fastIdx++;
+  if (window.__fastIdx >= queue.length) { document.title = 'DONE:' + Object.keys(c).length; return; }
+  const href = queue[window.__fastIdx];
+  const target = Array.from(document.querySelectorAll('a[href*="quizzes"]')).find(a => a.getAttribute('href') === href);
+  if (target) {
+    target.click();
+    document.title = Object.keys(c).length + '/' + queue.length + ' fast|' + window.__fastIdx;
+    setTimeout(function() {
+      let posterUrl = null;
+      try {
+        const iframe = document.querySelector('iframe[src*="/play/"]');
+        if (iframe && iframe.contentDocument) {
+          const img = iframe.contentDocument.querySelector('img');
+          if (img && img.src && img.src.includes('wistia')) posterUrl = img.src;
+        }
+      } catch(e) {}
+      if (posterUrl) {
+        const updated = JSON.parse(localStorage.getItem('__poster_collected') || '{}');
+        updated[href] = posterUrl;
+        localStorage.setItem('__poster_collected', JSON.stringify(updated));
+      }
+      window.__fastIdx++;
+      setTimeout(window.__fastNext, 500);
+    }, 4000);
+  } else { window.__fastIdx++; setTimeout(window.__fastNext, 500); }
+};
+
+// Start (or restart after stall)
+const c = JSON.parse(localStorage.getItem('__poster_collected') || '{}');
+const queue = JSON.parse(localStorage.getItem('__poster_queue') || '[]');
+window.__fastIdx = 0;
+for (let i = 0; i < queue.length; i++) { if (!c[queue[i]]) { window.__fastIdx = i; break; } }
+window.__fastNext();
+```
+
+**Restart when stalled:** Just re-run the "Start" block above. It reads localStorage, skips collected, continues from next uncollected.
 
 ### Prereq chain issues (lessons learned)
 - The platform requires ALL quizzes in a day/section to be "completed" before the next section unlocks
@@ -352,11 +410,13 @@ document.querySelector('iframe[src*="/play/"]').contentDocument.querySelector('i
 - Module field is numeric: 0 = Workouts (W1A + W1B mixed together), 1 = M1, 2 = M2, 3 = M3
 - W1A challenges can be identified by `quizUrl` containing `1a-algebra` (33 have this set)
 - W1B challenges have NO `quizUrl` set -- they're indistinguishable from W1A explanation quizzes without quizUrl
-- `questionImageUrl` points to `https://raw.githubusercontent.com/grrarr/fufu-daily-challenges/master/images/{filename}` for the 65 that have images
+- `questionImageUrl` points to `https://raw.githubusercontent.com/grrarr/fufu-daily-challenges/master/images/{filename}` for the 156 that have images
 
 ### Files on disk
-- `images/` -- 65 JPG poster images (32 M1 + 33 W1A), committed to git
+- `images/` -- 156 JPG poster images (123 M1 + 33 W1A), committed to git
 - `extracted-data-m1.json` -- raw M1 extraction data (123 quizzes with correct answers, Fufu scores)
+- `poster-urls-m1.txt` -- M1 poster URL mapping (quiz-slug|wistia-hash format, 91 explanation quizzes)
+- `download-m1-posters.sh` -- curl download script for M1 poster images
 - `poster-progress.json` -- stale progress file from earlier poster URL collection attempt (can ignore)
 - `VIDEO-QUESTION-GRABBER-SPEC.md` -- design spec for poster capture pipeline (partially outdated)
 
