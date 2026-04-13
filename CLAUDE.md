@@ -309,28 +309,33 @@ Filterable by Module/Workout column. Update this as extraction progresses.
 - **Ember sidebar scrape**: Navigated 60 M1 quizzes via sidebar clicks (Ember transitions, no full page reload). Got 0 poster URLs. The completion pages loaded via Ember sidebar navigation don't always render the video iframe -- the poster image element isn't in the DOM.
 - **Play endpoint API** (`/api/course_player/v2/contents/{id}/play/{playId}`): Returns 404 for most quizzes. The playId is per-content-specific (not a global enrollment ID). Only worked for 1 quiz where we had the exact ID from a prior iframe src.
 
-**Recommended approach for next session (TWO-PHASE, ~3 min per module):**
+**Recommended approach for next session (TESTED AND VERIFIED):**
 
-**Phase 1: Fast iframe.src collection (~1s per quiz)**
-- Use Ember sidebar clicks (fast transitions, no full page reload)
-- Poll for `iframe[src*="fast.wistia"]` ATTRIBUTE (not contentDocument -- that's what failed before)
-- Extract Wistia hash from iframe src: `iframe.src.match(/embed\/iframe\/([a-z0-9]+)/)[1]`
-- The `src` attribute is set by Ember template binding before the iframe loads -- no need to wait for contentDocument
-- Works on "You completed" pages too (iframe is in DOM with src set)
-- ~0.5-1.5s per quiz, 3s timeout worst case
+**Reading poster URL from page (confirmed working April 13):**
+```js
+document.querySelector('iframe[src*="/play/"]').contentDocument.querySelector('img').src
+// Returns: https://embed-ssl.wistia.com/deliveries/{hash}.jpg
+```
 
-**Phase 2: Batch resolve Wistia hashes to poster URLs (~0.5s per hash)**
-- Wistia oEmbed is public, no auth: `https://fast.wistia.com/oembed?url=https://fast.wistia.com/medias/${hash}&format=json`
-- Returns `thumbnail_url` (the poster CDN URL)
-- Alternative: `https://fast.wistia.com/medias/${hash}.json` → `media.assets.find(a => a.type === 'still_image').url`
-- Can append dimensions: `?image_crop_resized=1280x720`
+**Key details:**
+- The outer iframe src is a Thinkific play URL (`/api/course_player/v2/contents/{id}/play/{playId}`), NOT a Wistia URL
+- The Wistia poster image is INSIDE the play iframe's contentDocument (same-origin, so accessible)
+- This works on "You completed" pages -- the play iframe is present without clicking View Again
+- Requires ~4s wait after sidebar click for the inner iframe content to load
 
-**Phase 3: Download + commit**
+**Sidebar scrape approach (Ember sidebar clicks):**
+- Click sidebar quiz link → wait 4s → read poster from `iframe[src*="/play/"].contentDocument.querySelector('img').src`
+- DO NOT use tight polling loops (while + 150ms sleep) -- they interfere with Ember rendering and return null
+- Use simple sequential click → fixed wait → read pattern instead
+- ~5s per quiz, ~10 min for 123 quizzes
+
+**Why the April 12 scrape failed (60 quizzes, 0 posters):** Used a tight polling while-loop (150ms intervals) that interfered with Ember's iframe rendering. The iframe contentDocument never populated. Manual testing with 4s fixed wait works 3/3 times.
+
+**After collecting poster URLs:**
 - Download each poster JPG to `images/` folder on Dropbox
-- Update `questionImageUrl` in app data to GitHub raw content URLs
+- Update `questionImageUrl` in app data to GitHub raw content URLs  
 - Commit images + data, push
-
-**Why the previous sidebar scrape failed:** It tried to read `iframe.contentDocument.querySelector('img').src` which requires the iframe to fully load its cross-origin content. The `iframe.src` attribute approach avoids this entirely.
+- Image naming: `M1-D{day}-Q{n}-question.jpg` for all quizzes (not just stta/yt)
 
 **CRITICAL: Never click "View Again" during poster scrape** -- it creates prereq chain holes. Read poster from the completion page directly.
 
