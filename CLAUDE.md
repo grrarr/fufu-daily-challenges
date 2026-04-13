@@ -309,12 +309,28 @@ Filterable by Module/Workout column. Update this as extraction progresses.
 - **Ember sidebar scrape**: Navigated 60 M1 quizzes via sidebar clicks (Ember transitions, no full page reload). Got 0 poster URLs. The completion pages loaded via Ember sidebar navigation don't always render the video iframe -- the poster image element isn't in the DOM.
 - **Play endpoint API** (`/api/course_player/v2/contents/{id}/play/{playId}`): Returns 404 for most quizzes. The playId is per-content-specific (not a global enrollment ID). Only worked for 1 quiz where we had the exact ID from a prior iframe src.
 
-**Recommended approach for next session:**
-- Use **direct URL navigation** (full page reload per quiz) instead of Ember sidebar clicks
-- Slower (~8-10s per quiz vs ~3s for sidebar) but reliably renders the video iframe
-- For 523 remaining quizzes at ~10s each = ~87 minutes total
-- Can run as autonomous JS loop: navigate → wait 5s → read poster from iframe → store result → navigate next
-- Alternative: try to get Wistia hashes from the course structure API or page source, then construct poster URLs directly without navigation
+**Recommended approach for next session (TWO-PHASE, ~3 min per module):**
+
+**Phase 1: Fast iframe.src collection (~1s per quiz)**
+- Use Ember sidebar clicks (fast transitions, no full page reload)
+- Poll for `iframe[src*="fast.wistia"]` ATTRIBUTE (not contentDocument -- that's what failed before)
+- Extract Wistia hash from iframe src: `iframe.src.match(/embed\/iframe\/([a-z0-9]+)/)[1]`
+- The `src` attribute is set by Ember template binding before the iframe loads -- no need to wait for contentDocument
+- Works on "You completed" pages too (iframe is in DOM with src set)
+- ~0.5-1.5s per quiz, 3s timeout worst case
+
+**Phase 2: Batch resolve Wistia hashes to poster URLs (~0.5s per hash)**
+- Wistia oEmbed is public, no auth: `https://fast.wistia.com/oembed?url=https://fast.wistia.com/medias/${hash}&format=json`
+- Returns `thumbnail_url` (the poster CDN URL)
+- Alternative: `https://fast.wistia.com/medias/${hash}.json` → `media.assets.find(a => a.type === 'still_image').url`
+- Can append dimensions: `?image_crop_resized=1280x720`
+
+**Phase 3: Download + commit**
+- Download each poster JPG to `images/` folder on Dropbox
+- Update `questionImageUrl` in app data to GitHub raw content URLs
+- Commit images + data, push
+
+**Why the previous sidebar scrape failed:** It tried to read `iframe.contentDocument.querySelector('img').src` which requires the iframe to fully load its cross-origin content. The `iframe.src` attribute approach avoids this entirely.
 
 **CRITICAL: Never click "View Again" during poster scrape** -- it creates prereq chain holes. Read poster from the completion page directly.
 
