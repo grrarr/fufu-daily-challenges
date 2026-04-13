@@ -186,7 +186,8 @@ The solution page often contains a mix of:
 - Wrong answers still show the solution and state the correct answer letter
 - Page navigation resets all JS window objects -- cannot persist helpers across pages
 - Fufu's original scores tracked in extraction-tracker.xlsx, not in the app
-- Questions are displayed as **images on blue background** at the end of videos -- typically need screenshot
+- **Question poster images**: Only "Something to Think About" and "Your Turn" (non-Explanation) quizzes have question slides (blue background with math problem). "Challenge Explanation" and "Your Turn Explanation" video posters show the instructor with handwritten solutions -- these are NOT questions, skip them for poster capture. That's ~2 question quizzes per day × 16 days = 32 per module.
+- Poster URLs from Wistia CDN: `iframe[src*="play"].contentDocument.querySelector('img').src` gives `https://embed-ssl.wistia.com/deliveries/{hash}.jpg` -- clean image, no play button overlay. Store as `questionImageUrl` in app data. No OCR needed -- many questions have diagrams.
 - Solutions after answering correctly contain **actual `<img>` elements** with CDN URLs -- grab these directly
 - Solution pages often have multiple solution approaches (Solution 1, Solution 2) with separate images
 
