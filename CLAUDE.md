@@ -147,6 +147,8 @@ for (const b of document.querySelectorAll('button')) {
 
 ### Preserving Christopher's completion state
 No need to reset quiz state. Just record fufuOriginalScore (100% or 0%/untaken) in the Excel tracker before extracting.
+- After extraction/enrichment, check the Ember store for `completedAt: null` entries to detect broken completions
+- Fix by re-answering those specific quizzes
 
 ### Auto-solve
 Claude should solve the math problems and auto-select answers without asking the user. The questions are typically:
@@ -174,6 +176,13 @@ The solution page often contains a mix of:
 - Button text is mixed case ("Confirm" not "CONFIRM", "Next" not "NEXT") -- always use case-insensitive matching
 - Video jump to end: `const iframe = document.querySelector('iframe[src*="play"]'); const vid = iframe.contentDocument.querySelector('video'); vid.currentTime = vid.duration - 3; vid.pause();`
 - **0% quiz blocker**: Quizzes where Fufu scored 0% sometimes have PREREQUISITE videos that must be watched before answer choices render. Video jump via `currentTime` doesn't trigger the "watched" event. Workaround: user alt-tabs to Chrome to let video play in foreground.
+- **Prerequisite chain breakage from extraction**: During the quiz extraction and enrichment passes, some quizzes were left in an "incomplete" state (viewed but not completed). This broke the prerequisite chain:
+  - The platform requires ALL quizzes in a day/section to be "completed" (any score) before the next section unlocks
+  - Our "View Again" + answer approach sometimes didn't fully complete the quiz (the completion didn't persist)
+  - The Ember Data Store (`course-player-v2` app, accessible via `app.__container__.lookup('service:store').peekAll('user-content')`) shows which quizzes have `completedAt: null`
+  - Only 6 quizzes were actually broken in M1 (all in D1 and D2), not the 118 the sidebar suggested
+  - Fix: manually complete the 6 broken quizzes by answering any answer
+  - Prevention: in future extraction sessions, verify quiz completion persists before moving on
 - Wrong answers still show the solution and state the correct answer letter
 - Page navigation resets all JS window objects -- cannot persist helpers across pages
 - Fufu's original scores tracked in extraction-tracker.xlsx, not in the app
