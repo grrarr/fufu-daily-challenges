@@ -181,8 +181,8 @@ The solution page often contains a mix of:
   - Our "View Again" + answer approach sometimes didn't fully complete the quiz (the completion didn't persist)
   - The Ember Data Store (`course-player-v2` app, accessible via `app.__container__.lookup('service:store').peekAll('user-content')`) shows which quizzes have `completedAt: null`
   - Only 6 quizzes were actually broken in M1 (all in D1 and D2), not the 118 the sidebar suggested
-  - Fix: manually complete the 6 broken quizzes by answering any answer
-  - Prevention: in future extraction sessions, verify quiz completion persists before moving on
+  - Fix: manually complete the 6 broken quizzes -- must click through FULL flow: Answer → Confirm → Next (solution page) → score page loads → Continue. Completion only registers after reaching the score page.
+  - Prevention: in future extraction, always click through the full flow. Skipping the final Continue/Next leaves the quiz in "viewed but not completed" limbo state.
 - Wrong answers still show the solution and state the correct answer letter
 - Page navigation resets all JS window objects -- cannot persist helpers across pages
 - Fufu's original scores tracked in extraction-tracker.xlsx, not in the app
