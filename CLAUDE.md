@@ -253,14 +253,91 @@ const imageUrls = Array.from(imgs).map(i => i.src);
 - **W3**: D9 Business Accounting, D10 Estimating Profit, D11 Gear Ratios, D12 Winning Ratios
 - **W4**: D13 Working Together, D14 100 Bottles, D15 Harmonic Mean, D16 Changing Speed
 
-### Extraction scope
-- **Module 1**: FULLY EXTRACTED (123 quizzes across 16 days, all enriched with solution text + image URLs)
-- **Next**: Modules 2, 3, Workouts 1A, 1B
+### Course slugs (for API and URLs)
+- M1: `1-algebra-basics`
+- M2: `2-geometry`
+- M3: `3-algebra`
+- W1A: `1a-algebra`
+- W1B: `1b-algebra`
+
+### Extraction scope and quiz counts
+| Module/Workout | Quizzes | Solution text + images | Question poster images | Notes |
+|----------------|---------|----------------------|----------------------|-------|
+| M1 (Algebra Basics) | 123 | 123/123 DONE | 32/123 (STTA+YT only) | Missing 91 explanation quiz posters |
+| M2 (Geometry Tools) | 126 | 126/126 DONE | 0/126 | Not started |
+| M3 (Algebra Tools) | 157 | 157/157 DONE | 0/157 | Not started |
+| W1A (Algebra Basics) | 90 | 90/90 DONE | 33/90 (main Qs only) | Missing explanation quiz posters |
+| W1B (Algebra Basics) | 92 | 92/92 DONE | 0/92 | Not started |
+| **Total** | **588** | **588/588** | **65/588** | |
 
 ### Extraction tracker
 `extraction-tracker.xlsx` -- spreadsheet with one row per day across all in-scope modules/workouts.
 Columns: Module/Workout, Week, Day, Day Topic, Quizzes, Extracted, Fufu Score, Notes.
 Filterable by Module/Workout column. Update this as extraction progresses.
+
+---
+
+## Current status and next steps (as of 2026-04-12)
+
+### What's DONE
+1. **App built and deployed** -- `index.html` on GitHub Pages, fully functional browse/filter/expand UI
+2. **All 588 challenges extracted** -- M1 (123), M2 (126), M3 (157), W1A (90), W1B (92)
+3. **All 588 enriched with solution text + image URLs** -- via Thinkific quiz API batch fetch
+4. **65 question poster images captured** -- downloaded to `images/` folder, URLs point to GitHub raw content
+   - M1: 32 images (STTA + YT for each of 16 days): `M1-D{n}-stta-question.jpg`, `M1-D{n}-yt-question.jpg`
+   - W1A: 33 images (main questions Q1-Q33): `W1A-Q{n}-{topic}.jpg`
+5. **GitHub sync working** -- PAT in localStorage, `fufu-daily-challenges-data.json` syncs both directions
+
+### What's LACKING (priority order)
+1. **523 question poster images still needed** -- the main remaining task
+   - M1: 91 explanation quiz posters (Challenge Explanation + Your Turn Explanation quizzes)
+   - M2: all 126
+   - M3: all 157
+   - W1A: ~57 explanation quiz posters
+   - W1B: all 92
+2. **W1B challenges lack distinguishing marker** -- stored as `module: 0` same as W1A, no `quizUrl` field set. Need to add quizUrl or a workout field to tell W1A from W1B.
+3. **D9 enrichment gap** -- D9 challenges have minimal solution text ("see video" boilerplate from API)
+
+### Poster capture -- what works and what failed
+
+**What WORKS:**
+- Direct page navigation to quiz URL → wait for load → read `iframe[src*="play"].contentDocument.querySelector('img').src` → gives Wistia CDN poster URL (`https://embed-ssl.wistia.com/deliveries/{hash}.jpg`)
+- On "You completed" pages, the video iframe IS present and shows the poster -- no need to click View Again
+- Downloading JPG from Wistia URL and saving to `images/` folder locally
+
+**What FAILED (April 12 session):**
+- **Ember sidebar scrape**: Navigated 60 M1 quizzes via sidebar clicks (Ember transitions, no full page reload). Got 0 poster URLs. The completion pages loaded via Ember sidebar navigation don't always render the video iframe -- the poster image element isn't in the DOM.
+- **Play endpoint API** (`/api/course_player/v2/contents/{id}/play/{playId}`): Returns 404 for most quizzes. The playId is per-content-specific (not a global enrollment ID). Only worked for 1 quiz where we had the exact ID from a prior iframe src.
+
+**Recommended approach for next session:**
+- Use **direct URL navigation** (full page reload per quiz) instead of Ember sidebar clicks
+- Slower (~8-10s per quiz vs ~3s for sidebar) but reliably renders the video iframe
+- For 523 remaining quizzes at ~10s each = ~87 minutes total
+- Can run as autonomous JS loop: navigate → wait 5s → read poster from iframe → store result → navigate next
+- Alternative: try to get Wistia hashes from the course structure API or page source, then construct poster URLs directly without navigation
+
+**CRITICAL: Never click "View Again" during poster scrape** -- it creates prereq chain holes. Read poster from the completion page directly.
+
+### Prereq chain issues (lessons learned)
+- The platform requires ALL quizzes in a day/section to be "completed" before the next section unlocks
+- "View Again" starts a new quiz attempt -- if you don't complete the FULL flow (Answer → Confirm → Next → score page → Continue), the quiz gets stuck in "incomplete" state
+- This breaks the prereq chain for all subsequent quizzes in that day
+- The Ember Data Store shows broken completions: `app.__container__.lookup('service:store').peekAll('user-content').filter(u => !u.completedAt)`
+- **After fixing prereqs, a full page reload is needed** to clear the Ember cache -- stale prereq errors persist otherwise
+- During the April 12 session, prereqs were broken and fixed manually multiple times in M1 D1-D2
+
+### Data file structure notes
+- `fufu-daily-challenges-data.json` -- 588 challenges, each with fields per the data structure above
+- Module field is numeric: 0 = Workouts (W1A + W1B mixed together), 1 = M1, 2 = M2, 3 = M3
+- W1A challenges can be identified by `quizUrl` containing `1a-algebra` (33 have this set)
+- W1B challenges have NO `quizUrl` set -- they're indistinguishable from W1A explanation quizzes without quizUrl
+- `questionImageUrl` points to `https://raw.githubusercontent.com/grrarr/fufu-daily-challenges/master/images/{filename}` for the 65 that have images
+
+### Files on disk
+- `images/` -- 65 JPG poster images (32 M1 + 33 W1A), committed to git
+- `extracted-data-m1.json` -- raw M1 extraction data (123 quizzes with correct answers, Fufu scores)
+- `poster-progress.json` -- stale progress file from earlier poster URL collection attempt (can ignore)
+- `VIDEO-QUESTION-GRABBER-SPEC.md` -- design spec for poster capture pipeline (partially outdated)
 
 ---
 
